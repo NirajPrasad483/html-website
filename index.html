@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="cs.css">
+    <style>
+        /* Make the video cover the full screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: sans-serif;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;  /* shows the whole video */
+            z-index: -1;
+            background-color: black;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.5); /* Optional: adds a dark overlay */
+            color: white;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 12px;
+            margin-top: 5%;
+        }
+
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 6px;
+            border: none;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="back.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <header>
+            <h1>EC IITK Kanpur</h1>
+            <p>We'd love to hear your thoughts</p>
+            <p>Name, Roll No., Email Address Are Required To Keep A Check Who Gave Feedback,</p>
+            <p>Your Feedback Is Completely Anonymous To All The Managers.</p>
+        </header>
+        <form class="Feedback">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" placeholder="maxwell" required><br>
+            <label for="roll">Roll No:</label><br>
+            <input type="text" id="roll" placeholder="240010" required><br>
+            <label for="Email Address">Email Address:</label><br>
+            <input type="email" placeholder="max@example.com" id ="email" required><br>
+            <label for="experience">How was your Experience?</label><br>
+            <select id="experience" required>
+                <option value="disabled selected" disabled selected>Select your option</option>
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="average">Average</option>
+                <option value="poor">Poor</option>
+            </select><br>
+
+            <label for="comment">Additional comments:</label><br>
+            <textarea id="comment" rows="5" placeholder="Your Feedback Here.." required></textarea><br>
+            <button type="submit">Submit</button><br>
+            
+
+        </form>
+
+    </div>
+</body>
+</html>
